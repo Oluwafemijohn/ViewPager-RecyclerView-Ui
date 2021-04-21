@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.widget.CompositePageTransformer
+import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import com.example.weekfourtaskui.R
 import com.example.weekfourtaskui.adapters.RecyclerAdapter
@@ -88,6 +90,13 @@ class ProductsFragment : Fragment() {
             clipChildren = false
             offscreenPageLimit = 5
             setPadding(120, 0, 120, 0)
+                val marginPageTransformer = MarginPageTransformer(30)
+        val compositionPageTransformer = CompositePageTransformer()
+        compositionPageTransformer.addTransformer(marginPageTransformer)
+        compositionPageTransformer.addTransformer { page, position ->
+            page.scaleY = 1 - (0.25f * kotlin.math.abs(position))
+        }
+        viewPager.setPageTransformer(compositionPageTransformer)
 
 
 
