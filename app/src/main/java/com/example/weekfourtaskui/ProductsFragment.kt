@@ -83,12 +83,19 @@ class ProductsFragment : Fragment() {
 //            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         viewPager.adapter = ViewPagerAdapter()
 
+            viewPager.apply {
+            clipToPadding = false
+            clipChildren = false
+            offscreenPageLimit = 5
+            setPadding(120, 0, 120, 0)
+
+
 
 //        recyclerView.apply {
 //            layoutManager =  LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 //
 //            this.adapter = this@ProductsFragment.adapter
-//        }
+        }
     }
 
 //
@@ -97,12 +104,14 @@ class ProductsFragment : Fragment() {
 //         * Instantiate cards
 //         * */
 //        val debitCards = ViewPagerMode.list
-//        /**
-//         * Setup ViewpagerAdapter
-//         * */
-//        viewPagerAdapter = ViewPagerAdapter(debitCards)
+/*
+
+/ **
+* Setup ViewpagerAdapter
+* * /
+*/
+//    viewPagerAdapter = ViewPagerAdapter(list)
 //        viewPager.apply {
-//            adapter = ViewPagerAdapter
 //            clipToPadding = false
 //            clipChildren = false
 //            offscreenPageLimit = 2
@@ -115,7 +124,7 @@ class ProductsFragment : Fragment() {
 //            page.scaleY = 1 - (0.25f * kotlin.math.abs(position))
 //        }
 //        viewPager.setPageTransformer(compositionPageTransformer)
-////
+//
 ////        TabLayoutMediator(indicator, viewPager) { tab, position ->
 ////            tab.icon = resources.getDrawable(R.drawable.active_indicator)
 //////            viewPager.setCurrentItem(tab.position, true)
