@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/product_fragment_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityPageFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/nestedChild"
+        style="@style/product_fragment_Constrain_layout">
+
+        <!--           View Pager layout -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/vpContainer"
+            style="@style/view_pager_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TableLayout
+                android:id="@+id/tab_layout"
+                style="@style/tab_layou"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_pager"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--          // View Pager layout -->
+
+        <!--            Card View Layout-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardTabLayer"
+            style="@style/card_view_constrain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vpContainer">
+
+            <!-- First card  -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view"
+                style="@style/card_view"
+                app:cardCornerRadius="@dimen/card_radius"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/card_view2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <androidx.constraintlayout.widget.ConstraintLayout style="@style/card_constrain">
+
+                    <ImageView
+                        android:id="@+id/card1"
+                        style="@style/card1_image"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/card_function1"
+                        style="@style/card"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.529"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/card1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+            <!-- // First card  -->
+
+            <!-- Second card  -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view2"
+                style="@style/card_view1"
+                app:cardCornerRadius="@dimen/card_radius"
+                app:layout_constraintEnd_toStartOf="@+id/card_view3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/card_view"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout style="@style/card_constrain">
+
+                    <ImageView
+                        android:id="@+id/card2"
+                        style="@style/card2_image"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/card_function2"
+                        style="@style/card2_text"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.529"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/card2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+            <!-- // Second card  -->
+
+            <!-- Third card  -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view3"
+                style="@style/card_view1"
+                app:cardCornerRadius="@dimen/card_radius"
+                app:layout_constraintEnd_toStartOf="@+id/card_view4"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/card_view2"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout style="@style/card_constrain">
+
+                    <ImageView
+                        android:id="@+id/card3"
+                        style="@style/card3_image"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/card_function3"
+                        style="@style/card3"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.529"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/card3" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+            <!-- // Third card  -->
+            <!-- Four card  -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view4"
+                style="@style/card_view1"
+                app:cardCornerRadius="@dimen/card_radius"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/card_view3"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout style="@style/card_constrain">
+
+                    <ImageView
+                        android:id="@+id/card4"
+                        style="@style/card4_image"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/card_function4"
+                        style="@style/card4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.529"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/card4" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+            <!-- // Four card  -->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--            // Card View Layout -->
+
+        <!-- Special offer Layout  -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/spacialOffercontainer"
+            style="@style/special_offer_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardTabLayer">
+
+            <TextView
+                android:id="@+id/specialOffer"
+                style="@style/special_off"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/black_card_view1"
+                style="@style/black_card1"
+                app:cardCornerRadius="@dimen/black_card_radius"
+                app:layout_constraintEnd_toStartOf="@+id/black_card_view2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/specialOffer">
+
+                <androidx.constraintlayout.widget.ConstraintLayout style="@style/card_constrain">
+
+                    <TextView
+                        android:id="@+id/card_loan"
+                        style="@style/cash_loan"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/card_dollar"
+                        style="@style/dolar_sign"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/card_loan" />
+
+                    <TextView
+                        android:id="@+id/cash_loan"
+                        style="@style/loan_balance"
+
+                        app:layout_constraintStart_toEndOf="@+id/card_dollar"
+                        app:layout_constraintTop_toBottomOf="@+id/card_loan" />
+
+                    <ImageView
+                        android:id="@+id/dollar_logo"
+                        style="@style/dolar_sign2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/black_card_view2"
+                style="@style/black_card2"
+                app:cardCornerRadius="@dimen/black_card_radius"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/black_card_view1"
+                app:layout_constraintTop_toBottomOf="@+id/specialOffer">
+
+                <androidx.constraintlayout.widget.ConstraintLayout style="@style/card_constrain">
+
+                    <TextView
+                        android:id="@+id/card_loan2"
+                        style="@style/cash_loan"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        style="@style/black_card2_image"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_credit_card_bag" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        style="@style/black_card2_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/card_loan2"
+                        app:srcCompat="@drawable/ic_black_card_currency" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        style="@style/loan_balance"
+                        app:layout_constraintStart_toEndOf="@+id/imageView3"
+                        app:layout_constraintTop_toBottomOf="@+id/card_loan2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/partners"
+                style="@style/partners"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/black_card_view1" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                style="@style/recycler_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/partners"
+                tools:listitem="@layout/recycler_card_view"></androidx.recyclerview.widget.RecyclerView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- // Special offer Layout -->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

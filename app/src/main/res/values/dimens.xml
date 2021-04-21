@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bottom_navbar_icon_size">15dp</dimen>
+    <dimen name="viewpager_next_item_visible">37dp</dimen>
+    <dimen name="viewpager_current_item_horizontal_margin">57dp</dimen>
+    <dimen name="card_radius">10dp</dimen>
+    <dimen name="black_card_radius">5dp</dimen>
+    <dimen name="text">7dp</dimen>
+    <dimen name="card_elevation">10dp</dimen>
+</resources>

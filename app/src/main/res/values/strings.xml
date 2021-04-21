@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">WeekFourTaskUi</string>
+    <string name="my_image_description">Profile picture</string>
+    <string name="user_name">Oluwafemi Ogundipe</string>
+    <string name="profile">Profile picture</string>
+    <string name="notification">Notification</string>
+
+    <string name="history_string">Your transaction history</string>
+    <string name="more_action_string">more Actions</string>
+    <string name="payments">Payments</string>
+    <string name="supports">Supports from us</string>
+
+    <string name="fragment1">Darot</string>
+    <string name="card_type">Debit card</string>
+    <string name="currency">$</string>
+    <string name="amount">23,481,000.00</string>
+    <string name="card_code">4321</string>
+    <string name="card_name">VISA</string>
+    <string name="card1_holders_name">Darot</string>
+    <string name="card2_holders_name">Stephen</string>
+    <string name="card3_holders_name">Dave</string>
+    <string name="card4_holders_name">John</string>
+    <string name="card5_holders_name">Oluwafemi</string>
+    <string name="textview">TextView</string>
+    <string name="credit">Credit card</string>
+    <string name="balance">234,810</string>
+    <string name="partners">Partners</string>
+    <string name="company_name">AliExpress</string>
+    <string name="from">from</string>
+    <string name="rate">4</string>
+    <string name="percentage">%</string>
+    <string name="product">Clothes and shoes</string>
+
+</resources>
