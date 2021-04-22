@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -16,6 +18,9 @@ import com.example.weekfourtaskui.adapters.ViewPagerAdapter
 import com.example.weekfourtaskui.datamode.ViewPagerMode
 import com.example.weekfourtaskui.datasource.RecyclerViewDataSource
 import com.example.weekfourtaskui.datasource.ViewPagerDataSource
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
+import kotlinx.android.synthetic.main.fragment_products.*
 import java.nio.file.Files.list
 import java.util.Collections.list
 
@@ -29,6 +34,7 @@ class ProductsFragment : Fragment() {
 
     lateinit var recyclerView: RecyclerView
     lateinit var viewPager: ViewPager2
+    lateinit var dotIndicator:TabLayout
 
     private var param1: String? = null
     private var param2: String? = null
@@ -45,6 +51,27 @@ class ProductsFragment : Fragment() {
 //        addDataSet()
         initRecyclerView()
         initViewPager()
+
+
+
+
+//        TabLayoutMediator(view.findViewById(R.id.tab_layout), viewPager) { tab, position ->
+//            tab.icon = resources.getDrawable(R.drawable.inactive_drwawable)
+//        }.attach()
+//        dotscount = adapter.itemCount
+//        val dots = arrayOfNulls<ImageView>(dotscount)
+//        for (i in 0 until dotscount) {
+//            dots[i] = ImageView(requireContext())
+//            dots[i]!!.setImageDrawable(
+//                ContextCompat.getDrawable(
+//                    requireContext(),
+//                    R.drawable.non_active_dot)) }
+//        return view
+        dotIndicator = view.findViewById(R.id.tab_layout)
+
+        TabLayoutMediator(dotIndicator, viewPager) { tab, position ->
+            viewPager.setCurrentItem(tab.position, true)
+        }.attach()
 
 
         return view
@@ -100,11 +127,16 @@ class ProductsFragment : Fragment() {
 
 
 
+
+
+
 //        recyclerView.apply {
 //            layoutManager =  LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 //
 //            this.adapter = this@ProductsFragment.adapter
         }
+
+
     }
 
 //

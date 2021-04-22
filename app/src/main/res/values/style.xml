@@ -18,7 +18,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginStart">18dp</item>
-        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:layout_marginTop">12dp</item>
         <item name="android:fontFamily">@font/montserrat_bold</item>
     </style>
 
@@ -204,7 +204,7 @@
     <style name="toolbar_constaint_layer">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">44dp</item>
+        <item name="android:layout_marginTop">20dp</item>
     </style>
 
     <style name="toolbar_image">
@@ -263,17 +263,12 @@
     <style name="view_pager">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-<!--        <item name="android:layout_marginTop">4dp</item>-->
-<!--        <item name="android:clipChildren">false</item>-->
-<!--        <item name="android:clipToPadding">false</item>-->
-<!--        <item name="android:paddingTop">16dp</item>-->
-        <item name="android:translationZ">10dp</item>
     </style>
 
 
     <style name="tab_layou">
-        <item name="android:layout_width">186dp</item>
-        <item name="android:layout_height">15dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
 

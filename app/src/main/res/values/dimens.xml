@@ -7,4 +7,5 @@
     <dimen name="black_card_radius">5dp</dimen>
     <dimen name="text">7dp</dimen>
     <dimen name="card_elevation">10dp</dimen>
+    <dimen name="balance_bottom_margin">29</dimen>
 </resources>

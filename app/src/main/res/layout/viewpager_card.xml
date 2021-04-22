@@ -3,6 +3,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card_view"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginLeft="16dp"
@@ -33,24 +34,28 @@
         <TextView
             android:id="@+id/debit_card"
             style="@style/card_type"
+            android:layout_marginTop="4dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/card_name" />
 
         <ImageView
             android:id="@+id/currency"
             style="@style/currency"
+            android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/debit_card" />
 
         <TextView
             android:id="@+id/amount"
             style="@style/amount"
+            android:layout_marginTop="15dp"
             app:layout_constraintStart_toEndOf="@+id/currency"
             app:layout_constraintTop_toBottomOf="@+id/debit_card" />
 
         <TextView
             android:id="@+id/card_code"
             style="@style/card_code"
+            android:layout_marginTop="47dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/debit_card"
@@ -59,7 +64,7 @@
         <TextView
             android:id="@+id/card_type_name"
             style="@style/card_name"
-
+            android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/amount"

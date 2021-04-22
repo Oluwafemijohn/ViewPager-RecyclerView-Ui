@@ -25,7 +25,6 @@
                 android:id="@+id/view_pager"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:clipChildren="false"
                 android:clipToPadding="false"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -33,9 +32,13 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
 
-            <TableLayout
+            <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tab_layout"
                 style="@style/tab_layou"
+                app:tabGravity="center"
+                app:tabBackground="@drawable/indicator"
+                app:tabIndicatorHeight="0dp"
+                android:background="@color/general_bacground_color"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"

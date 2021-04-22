@@ -13,7 +13,7 @@ class ViewPagerDataSource {
             list.add(ViewPagerMode("Olalekan", "33,481,000.00", Color.BLUE))
             list.add(ViewPagerMode("Oluwafemi", "93,481,000.00", Color.DKGRAY))
             list.add(ViewPagerMode("Abdulrazaaq", "43,481,000.00", Color.MAGENTA))
-            list.add(ViewPagerMode("Samuel", "23,481,000.00", Color.GREEN))
+            list.add(ViewPagerMode("Samuel", "23,481,000.00", Color.rgb(0,0,0)))
             return list
         }
     }
