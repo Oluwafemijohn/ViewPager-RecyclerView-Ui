@@ -18,6 +18,7 @@ class RecyclerAdapter:RecyclerView.Adapter<RecyclerAdapter.CardViewHolder>() {
         private val  rate = itemView.findViewById<TextView>(R.id.rate)
         private val product  = itemView.findViewById<TextView>(R.id.products)
 
+        //Binding the data with the view
         fun  bind(recyclerModel: RecyclerModel){
             company.text = recyclerModel.company
             rate.text = recyclerModel.rate

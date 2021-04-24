@@ -19,15 +19,15 @@ class MainActivity : AppCompatActivity() {
 
         ProductsFragment()
 
-//        call the listener to the bottom navigataion
+        //        call the listener to the bottom navigataion
         val bottomNavigation: BottomNavigationView = findViewById(R.id.menuBar)
         bottomNavigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
 
-////        Notification
+        ////        Notification
 
         var btn = findViewById<ImageButton>(R.id.imageButton)
-//      add listener to the notification buttion
+        //      add listener to the notification buttion
         btn.setOnClickListener{
             showNotification("Femi" ,"Notification")
         }
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-//    Bottom navigation handler
+    //    Bottom navigation handler
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.menuProduct -> {
@@ -87,27 +87,18 @@ class MainActivity : AppCompatActivity() {
 
     //  To send notification
     fun showNotification(title: String, message: String) {
-        //    get system notification service
         val mNotificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-        // checking if android version is greater than oreo(API 26) or not
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             val channel = NotificationChannel("YOUR_CHANNEL_ID",
                 "YOUR_CHANNEL_NAME",
                 NotificationManager.IMPORTANCE_DEFAULT)
             channel.description = "YOUR_NOTIFICATION_CHANNEL_DESCRIPTION"
-            mNotificationManager.createNotificationChannel(channel)
-        }
+            mNotificationManager.createNotificationChannel(channel)        }
         val mBuilder = NotificationCompat.Builder(applicationContext, "YOUR_CHANNEL_ID")
-            // notification icon
             .setSmallIcon(R.mipmap.ic_launcher)
-            // title for notification
             .setContentTitle(title)
-            // message for notification
             .setContentText(message)
-            //importancy
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-
-            // clear notification after click
             .setAutoCancel(true)
         val intent = Intent(this, MainActivity::class.java)
         intent.putExtra("data","Active")
@@ -115,13 +106,6 @@ class MainActivity : AppCompatActivity() {
         mBuilder.setContentIntent(pi)
         mNotificationManager.notify(0, mBuilder.build())
     }
-
-
-
-
-//    Tab Layout Indicator amd Transition of the current card
-
-
 }
 
 

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
    style="@style/main_activity_background"
     tools:context=".MainActivity">
-
+    <!--Tool bar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         style="@style/toolber"
@@ -48,9 +48,9 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.appcompat.widget.Toolbar>
+    <!--// Tool bar -->
 
-<!--        Scroll view-->
-
+    <!--  Scroll view-->
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollable_main"
         style="@style/nested_scroll_view"
@@ -64,7 +64,9 @@
 
 
     </androidx.core.widget.NestedScrollView>
+    <!--//  Scroll view-->
 
+    <!--  Bottom nav bar-->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/menuBar"
         style="@style/bottom_nav"
@@ -80,6 +82,6 @@
         app:menu="@menu/menu">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
-
+    <!-- // Bottom nav bar-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

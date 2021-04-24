@@ -6,7 +6,7 @@
     android:layout_marginRight="16dp"
     app:cardElevation="@dimen/card_elevation"
     app:cardPreventCornerOverlap="false">
-
+    <!--  card view inner constrainLayout-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -82,5 +82,5 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
+    <!-- // card view inner constrainLayout-->
 </androidx.cardview.widget.CardView>
