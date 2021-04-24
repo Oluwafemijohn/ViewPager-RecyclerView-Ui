@@ -7,14 +7,13 @@ import com.example.weekfourtaskui.datamode.ViewPagerMode
 
 class ViewPagerDataSource {
     companion object{
-        fun createDataSet(): ArrayList<ViewPagerMode>  {
-            val list = ArrayList<ViewPagerMode>()
-            list.add(ViewPagerMode("Darot", "23,481,000.00", Color.RED))
-            list.add(ViewPagerMode("Olalekan", "33,481,000.00", Color.BLUE))
-            list.add(ViewPagerMode("Oluwafemi", "93,481,000.00", Color.DKGRAY))
-            list.add(ViewPagerMode("Abdulrazaaq", "43,481,000.00", Color.MAGENTA))
-            list.add(ViewPagerMode("Samuel", "23,481,000.00", Color.rgb(0,0,0)))
-            return list
+        fun createDataSet(): List<ViewPagerMode>  {
+            return listOf(ViewPagerMode("Darot", "23,481,000.00", Color.RED),
+                ViewPagerMode("Olalekan", "33,481,000.00", Color.BLUE),
+                ViewPagerMode("Oluwafemi", "93,481,000.00", Color.DKGRAY),
+                ViewPagerMode("Abdulrazaaq", "43,481,000.00", Color.MAGENTA),
+                ViewPagerMode("Samuel", "23,481,000.00", Color.rgb(0,0,0))
+            )
         }
     }
 }
