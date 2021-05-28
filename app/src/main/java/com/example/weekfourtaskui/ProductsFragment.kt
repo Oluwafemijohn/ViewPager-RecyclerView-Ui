@@ -60,12 +60,7 @@ class ProductsFragment : Fragment() {
 
     // Initialize a new linear layout manager (Recycler view)
     private fun initRecyclerView() {
-        recyclerView.layoutManager =
-            LinearLayoutManager(
-                requireContext(), // Context
-                LinearLayoutManager.HORIZONTAL, // Orientation
-                false
-            ) // Reverse layout
+        recyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false) // Reverse layout
         recyclerView.adapter = adapter
     }
 

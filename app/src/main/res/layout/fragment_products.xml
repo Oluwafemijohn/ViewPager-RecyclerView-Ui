@@ -8,6 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".ActivityPageFragment">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/nestedChild"
         style="@style/product_fragment_Constrain_layout">

@@ -17,7 +17,6 @@ class RecyclerAdapter:RecyclerView.Adapter<RecyclerAdapter.CardViewHolder>() {
         private val company: TextView = itemView.findViewById(R.id.company_name)
         private val  rate = itemView.findViewById<TextView>(R.id.rate)
         private val product  = itemView.findViewById<TextView>(R.id.products)
-
         //Binding the data with the view
         fun  bind(recyclerModel: RecyclerModel){
             company.text = recyclerModel.company
@@ -39,5 +38,4 @@ class RecyclerAdapter:RecyclerView.Adapter<RecyclerAdapter.CardViewHolder>() {
     override fun getItemCount(): Int {
         return items.size
     }
-
 }
